@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="css/style.css">
+   <title>Работа</title>
+   <script>
+      document.addEventListener('DOMContentLoaded', () => {
+         createTodoApp(document.querySelector('.container'), 'Список задач', key = 'works');
+      });
+   </script>
+</head>
+
+<body>
+   <div class="wrapper">
+      <header class="header">
+         <nav class="header-container">
+            <ul class="header__list">
+               <li>
+                  <a href="index.html" class="header__link">Дела</a>
+               </li>
+               <li>
+                  <a href="shops.html" class="header__link">Покупки</a>
+               </li>
+               <li>
+                  <a href="#" class="header__link">Работа</a>
+               </li>
+            </ul>
+            </т>
+      </header>
+      <main class="todo">
+         <div class="container">
+            <form action="#" class="todo__create">
+               <input class="todo__input" type="text" placeholder="Введите задачу">
+               <button class="btn btn__add">
+                  <span></span>
+                  <span></span>
+               </button>
+            </form>
+            <ul class="todo__list">
+
+            </ul>
+         </div>
+      </main>
+   </div>
+   <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,196 @@
+@import '_nullstyle';
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap');@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap');
+
+$brown-100: #f7efe7;
+$brown-300: #bfb0a0;
+$brown-900: #312c38;
+$red: #e73c73;
+
+body{
+   font-family: 'Roboto', sans-serif;
+   font-weight: 300;
+   color: $brown-900;
+   a{color: $brown-900;}
+
+   background-color: $brown-100;
+}
+
+.wrapper{
+   display: flex;
+   flex-direction: column;
+   min-height: 100vh;
+} 
+.header-container{
+   max-width: 425px;
+   margin: 0 auto;
+   padding: 0px 20px;
+}
+.container{
+   max-width: 425px;
+   margin: 0 auto;
+   padding: 0px 20px;
+}
+
+.title{
+   font-size: 40px;
+   padding-bottom: 20px;
+   text-align: center;
+}
+
+.header{
+   padding: 40px 0px 20px;
+   &__list{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+   }
+   &__link{
+      padding: 5px 30px;
+      border: 1px solid $brown-900;
+      border-radius: 15px;
+
+      font-weight: 500;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+   }
+}
+._active{
+   background-color: $brown-900;
+   color: $brown-100;
+}
+
+.todo{
+   padding: 40px 0px;
+   &__create{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      background-color: $brown-900;
+      padding: 5px;
+      border-radius: 30px;
+      input{
+         border-radius: 40px;
+         padding-left: 10px;
+
+         height: 40px;
+         min-width: 250px;
+
+         font-weight: 500;
+         letter-spacing: 1px;
+         color: $brown-900;
+      }
+   }
+   &__list{
+      padding-top: 30px;
+   }
+}
+
+.do{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+
+   margin-top: 10px;
+
+   border: 1px solid $brown-900;
+   padding: 5px 5px 5px 15px;
+   border-radius: 30px;
+
+   font-weight: 500;
+}
+._success{
+   background-color: $brown-300;
+}
+
+.wrapper-btn{
+   display: flex;
+}
+
+.btn{
+   height: 40px;
+   width: 40px;
+   border-radius: 50%;
+   margin-left: 15px;
+   &__add{
+      background-color: $brown-100;
+      position: relative;
+      span{
+         display: inline-block;
+         position: absolute;
+         top: 18px;
+         left: 4px;
+         z-index: 2;
+
+         background-color: $brown-900;
+         border-radius: 2px;
+         height: 4px;
+         width: 32px;
+         &:last-child{
+            transform: rotate(90deg);
+            span{background-color: $brown-100;}
+         }
+      }
+      &:disabled{
+         background-color: $brown-300;
+      }
+   }
+   &__done{
+      //background-color: $brown-100;
+      background: transparent;
+      outline: 1px solid $brown-900;
+      position: relative;
+      span{
+         display: inline-block;
+         position: absolute;
+         z-index: 2;
+
+         background-color: $brown-900;
+         border-radius: 2px;
+         width: 4px;
+         &:first-child{
+            height: 24px;
+            top: 9px;
+            left: 22px;
+            transform: rotate(30deg);
+         }
+         &:last-child{
+            height: 16px;
+            top: 16px;
+            left: 13px;
+            transform: rotate(-30deg);
+         }
+      }
+   }
+   &__delete{
+      background-color: $brown-900;
+      position: relative;
+      span{
+         display: inline-block;
+         position: absolute;
+         top: 18px;
+         left: 4px;
+         z-index: 2;
+
+         background-color: $brown-100;
+         border-radius: 2px;
+         height: 4px;
+         width: 32px;
+         &:first-child{
+            transform: rotate(45deg);
+         }
+         &:last-child{
+            transform: rotate(-45deg);
+         }
+      }
+   }
+}
+
+._delete{
+   background-color: $brown-100;
+   span{
+      background-color: $red;
+   }
+}
